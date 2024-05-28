@@ -35,6 +35,10 @@ for symbol in train_data.columns:
 # Convert metrics to a DataFrame for display
 metrics_df = pd.DataFrame(metrics).T
 
+# Display the metrics
+print("Stock Prediction Metrics:")
+print(metrics_df)
+
 # Plot the results
 plt.figure(figsize=(15, 10))
 for i, symbol in enumerate(train_data.columns, 1):
@@ -48,4 +52,3 @@ for i, symbol in enumerate(train_data.columns, 1):
 plt.tight_layout()
 plt.show()
 
-import ace_tools as tools; tools.display_dataframe_to_user(name="Stock Prediction Metrics", dataframe=metrics_df)
